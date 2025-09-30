@@ -1,0 +1,15 @@
+# FastText model
+lid.176.bin
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# Flask
+instance/
+.env
