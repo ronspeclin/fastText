@@ -1,2 +1,2 @@
-fasttext
-flask
+fasttext-wheel
+flask==3.0.0
