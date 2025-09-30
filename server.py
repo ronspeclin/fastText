@@ -6,6 +6,10 @@ app = Flask(__name__)
 # Load the pre-trained language ID model
 model = fasttext.load_model("lid.176.bin")
 
+@app.route("/", methods=["GET"])
+def index():
+    return jsonify({"status": "ok", "message": "FastText Language Detection API", "endpoint": "/detect"})
+
 @app.route("/detect", methods=["POST"])
 def detect_language():
     data = request.json
