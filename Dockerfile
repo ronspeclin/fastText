@@ -22,4 +22,4 @@ COPY server.py .
 
 EXPOSE 5000
 
-CMD ["python", "server.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "2", "--timeout", "120", "server:app"]
